@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>CRUD</title>
+        <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.5.5.4/themes/default/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.5.5.4/themes/icon.css" />
+        <script type="text/javascript" src="../../jquery-easyui-1.5.5.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../../jquery-easyui-1.5.5.4/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="../../js/user/userAdd.js"></script>
+        <!-- 中文化 -->
+        <script type="text/javascript" src="../../jquery-easyui-1.5.5.4/locale/easyui-lang-zh_CN.js"></script>
+        <!-- 导入自己的 js -->
+    </head>
+
+    <body>
+		<p><strong>选择需要导入的表名称，然后上传文件导入</strong></p>
+		<div style="margin:0px;"></div>
+		<span>选择导入表名:</span>
+		<select id="tableTitle" class="easyui-combobox" style="height:28px" onchange="changeAlign(this.value)">
+			<option value="" selected></option>
+			<option value="user">用户信息表</option>
+		</select>
+		<div style="margin:20px 0;"></div>
+		<div class="easyui-panel" style="width:100%;max-width:400px;padding:0px 60px;">
+			<p>请选择excel文件</p>
+			<form id="upload-file-form">
+				<input id="uploadfile" name="uploadfile" class="easyui-filebox" style="width:100%" data-options="prompt:'Choose a file...'">
+			 
+			 <!--  <label for="upload-file-input">Upload your file:</label>
+			  <input id="upload-file-input" type="file" name="uploadfile" accept="*" /> -->
+			</form>
+			<div>
+				<a href="#" class="easyui-linkbutton" style="width:100px;margin:20px 30px 30px 70px" onclick="uploadFile()">上载</a>
+			</div>
+			<div>
+				<a href="#" class="easyui-linkbutton" style="width:100px;margin:0px 30px 10px 70px" onclick="downloadFile()">下载</a>
+			</div>
+		</div>
+		
+		<!-- 提示框 -->
+		<div id="dlg" class="easyui-dialog" title="提示框" style="width:400px;height:200px;padding:10px;text-align:center"
+				data-options="
+					iconCls: 'icon-save',
+					buttons: [{
+						text:'确定',
+						iconCls:'icon-ok',
+						handler:function(){
+							$('#dlg').dialog('close');
+						}
+					}]
+				">
+			The dialog content.
+		</div>
+        <!--数据展示 -->
+		 <div>
+		   <table id="DataGridInbound"></table>
+		 </div>
+    </body>
+</html>

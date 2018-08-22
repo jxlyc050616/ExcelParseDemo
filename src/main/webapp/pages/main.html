@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>数据转换平台</title>
+        <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.5.5.4/themes/default/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.5.5.4/themes/icon.css" />
+        <script type="text/javascript" src="../jquery-easyui-1.5.5.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../jquery-easyui-1.5.5.4/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="../../js/main.js"></script>
+    </head>
+
+    <body class="easyui-layout">
+
+        <div region="north" style="height: 50px;background-color: #F0F0F0">
+            <table style="padding: 5px" width="100%">
+                <tr>
+                    <td width="50%">
+                        <!-- <img alt="logo" src="images/logo.png" /> -->
+                    </td>
+                    <td valign="bottom" align="right" width="50%">
+                        <font size="3">&nbsp;&nbsp;<strong>欢迎：</strong><span>xx</span></font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div region="center">
+            <div class="easyui-tabs" fit="true" border="false" id="tabs">
+                <div title="首页" data-options="iconCls:'icon-help'">
+                    <div align="center" style="padding-top: 100px"> 
+                        <font color="green" size="10">欢迎使用</font>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div region="west" style="width: 200px" title="导航菜单" split="true">
+            <div style="padding-top: 10px;padding-left: 10px;">
+                <a href="javascript:openTab('添加','/pages/user/userAdd.html','icon-add')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" style="width: 150px;">添加</a>
+                <a href="javascript:openTab('修改','/pages/user/userUpdate.html','icon-edit')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" style="width: 150px;">修改</a><!-- 
+                <a href="javascript:openTab('删除','https://www.csdn.net','icon-remove')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'" style="width: 150px;">删除</a>
+                <a href="javascript:openTab('保存','http://edu.51cto.com','icon-ok')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-ok'" style="width: 150px;">保存</a>
+                <a href="javascript:openTab('导出','http://www.people.com.cn/','icon-save')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'" style="width: 150px;">导出</a>
+                <a href="javascript:logout()" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-no'" style="width: 150px;">退出</a> -->
+            </div>
+        </div>
+
+        <div region="south" style="height: 30px;padding: 5px" align="center">
+            Copyright © 2018-2018 
+        </div>
+
+    </body>
+
+</html>

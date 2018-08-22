@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<workbook>
+    <worksheet name="Sheet1">
+    <!-- 开始行数，和结束行数。把EXCEL表中的前两排直接干掉-->
+    <section startRow="0" endRow="1"></section>
+    <!-- 下面是一行的模版，获取一行，之后的行数就按这个模版来获取-->
+    <!-- items是集合的名称。-->
+        <loop startRow="2" endRow="2" items="userVo" var="userVo" 
+        varType="com.example.model.UserDomain">
+            <section startRow="2" endRow="2">
+                <mapping row="2" col="1">userVo.userName</mapping>
+                <mapping row="2" col="2">userVo.password</mapping>
+                <mapping row="2" col="3">userVo.phone</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                <cellcheck offset="0"></cellcheck>
+                </rowcheck>
+                    <!--循环到值为空的时候结束 -->
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>
